@@ -8,3 +8,4 @@ set(COMPONENT_REQUIRES
 register_component()
 
 component_compile_options(PUBLIC "-DI2CBUS_COMPONENT_TRUE=1")
+#component_compile_definitions("I2CBUS_COMPONENT_TRUE=1")

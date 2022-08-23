@@ -110,6 +110,7 @@ class I2C {
     esp_err_t writeBits(uint8_t devAddr, uint8_t regAddr, uint8_t bitStart, uint8_t length, uint8_t data, int32_t timeout = -1);
     esp_err_t writeByte(uint8_t devAddr, uint8_t regAddr, uint8_t data, int32_t timeout = -1);
     esp_err_t writeBytes(uint8_t devAddr, uint8_t regAddr, size_t length, const uint8_t *data, int32_t timeout = -1);
+    esp_err_t writeRawBytes(uint8_t devAddr, size_t length, const uint8_t *data, int32_t timeout = -1);
 
     /**
      * *** READING interface ***
@@ -133,6 +134,7 @@ class I2C {
     esp_err_t readBits(uint8_t devAddr, uint8_t regAddr, uint8_t bitStart, uint8_t length, uint8_t *data, int32_t timeout = -1);
     esp_err_t readByte(uint8_t devAddr, uint8_t regAddr, uint8_t *data, int32_t timeout = -1);
     esp_err_t readBytes(uint8_t devAddr, uint8_t regAddr, size_t length, uint8_t *data, int32_t timeout = -1);
+    esp_err_t readRawBytes(uint8_t devAddr, size_t length, uint8_t *data, int32_t timeout = -1);
 
     /**
      * @brief  Quick check to see if a slave device responds.
